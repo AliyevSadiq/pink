@@ -9,6 +9,21 @@ document.getElementById("close-btn").onclick=function () {
     document.getElementById("open-btn").style.display="flex";
 }
 
+
+window.addEventListener("resize",function(){
+	if(window.innerWidth>=804){
+		 document.getElementById("open-btn").style.display="none";
+		  document.getElementById("close-btn").style.display="none";
+		  document.getElementById("menu-list").style.display="flex";
+	}else{
+		if(document.getElementById("close-btn").style.display=='none'){
+			 document.getElementById("open-btn").style.display="flex";
+			 document.getElementById("menu-list").style.display="none";
+		}
+	}
+});
+
+
 var n=0,
     totalCount=document.getElementsByClassName('slider-item').length,
     sliderItems=document.getElementsByClassName('slider-item');
